@@ -265,10 +265,10 @@ const calendar = computed(() => {
         emit('clickNext', datepicker.value.previous)
       },
       onPreviousYear: () => {
-        datepicker.value.year.previous = datepicker.value.year.previous - 12
+        datepicker.value.year.previous = datepicker.value.year.previous - 5
       },
       onNextYear: () => {
-        datepicker.value.year.previous = datepicker.value.year.previous + 12
+        datepicker.value.year.previous = datepicker.value.year.previous + 5
       },
       openMonth: () => {
         panel.previous.month = !panel.previous.month
@@ -362,7 +362,7 @@ const calendar = computed(() => {
       years: () => {
         return Array.from(
           {
-            length: 12,
+            length: 5,
           },
           (v, k) => year.next + k,
         )
@@ -379,10 +379,10 @@ const calendar = computed(() => {
         emit('clickRightNext', datepicker.value.next)
       },
       onPreviousYear: () => {
-        datepicker.value.year.next = datepicker.value.year.next - 12
+        datepicker.value.year.next = datepicker.value.year.next - 5
       },
       onNextYear: () => {
-        datepicker.value.year.next = datepicker.value.year.next + 12
+        datepicker.value.year.next = datepicker.value.year.next + 5
       },
       openMonth: () => {
         panel.next.month = !panel.next.month
