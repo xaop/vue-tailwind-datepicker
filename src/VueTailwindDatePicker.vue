@@ -1494,7 +1494,7 @@ provide(setToCustomShortcutKey, setToCustomShortcut)
                     <div class="px-0.5 sm:px-2">
                       <VtdMonth v-show="panel.previous.month" :months="months"
                         @update-month="calendar.previous.setMonth" />
-                      <VtdYear v-show="panel.previous.year" :years="calendar.previous.years()"
+                      <VtdYear v-show="panel.previous.year" :years="calendar.previous.years(5)"
                         @update-year="calendar.previous.setYear" />
                       <div v-show="panel.previous.calendar">
                         <VtdWeek :weeks="weeks" />
@@ -1509,7 +1509,7 @@ provide(setToCustomShortcutKey, setToCustomShortcut)
                     <VtdHeader as-prev-or-next :panel="panel.next" :calendar="calendar.next" />
                     <div class="px-0.5 sm:px-2">
                       <VtdMonth v-show="panel.next.month" :months="months" @update-month="calendar.next.setMonth" />
-                      <VtdYear v-show="panel.next.year" as-prev-or-next :years="calendar.next.years()"
+                      <VtdYear v-show="panel.next.year" as-prev-or-next :years="calendar.next.years(5)"
                         @update-year="calendar.next.setYear" />
                       <div v-show="panel.next.calendar">
                         <VtdWeek :weeks="weeks" />
