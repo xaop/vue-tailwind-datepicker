@@ -1840,7 +1840,7 @@ const Mr = ["disabled", "placeholder", "onKeyup"], Sr = { class: "absolute inset
           year: p && p.year(),
           years: () => Array.from(
             {
-              length: 12
+              length: 5
             },
             (d, j) => m.previous + j
           ),
@@ -1851,10 +1851,10 @@ const Mr = ["disabled", "placeholder", "onKeyup"], Sr = { class: "absolute inset
             o.value.previous = p.add(1, "month"), p.diff(f, "month") === -1 && (o.value.next = f.add(1, "month")), a("clickNext", o.value.previous);
           },
           onPreviousYear: () => {
-            o.value.year.previous = o.value.year.previous - 12;
+            o.value.year.previous = o.value.year.previous - 5;
           },
           onNextYear: () => {
-            o.value.year.previous = o.value.year.previous + 12;
+            o.value.year.previous = o.value.year.previous + 5;
           },
           openMonth: () => {
             l.previous.month = !l.previous.month, l.previous.year = !1, l.previous.calendar = !l.previous.month;
@@ -1901,7 +1901,7 @@ const Mr = ["disabled", "placeholder", "onKeyup"], Sr = { class: "absolute inset
           year: f && f.year(),
           years: () => Array.from(
             {
-              length: 12
+              length: 5
             },
             (d, j) => m.next + j
           ),
@@ -1912,10 +1912,10 @@ const Mr = ["disabled", "placeholder", "onKeyup"], Sr = { class: "absolute inset
             o.value.next = f.add(1, "month"), a("clickRightNext", o.value.next);
           },
           onPreviousYear: () => {
-            o.value.year.next = o.value.year.next - 12;
+            o.value.year.next = o.value.year.next - 5;
           },
           onNextYear: () => {
-            o.value.year.next = o.value.year.next + 12;
+            o.value.year.next = o.value.year.next + 5;
           },
           openMonth: () => {
             l.next.month = !l.next.month, l.next.year = !1, l.next.calendar = !l.next.month;
